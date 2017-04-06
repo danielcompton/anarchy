@@ -85,8 +85,6 @@ These (hotlinked) images are courtesy of DTRules (upon whose excellent ideas ana
 ;; All matches example
 (->> (a/match-conds conditions m2 data)
      (a/match-actions a2)))
-
-;; Note that both of the examples above are equivalent to this code:
 ```
 
 ## Copyright and License
