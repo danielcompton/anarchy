@@ -11,8 +11,6 @@ cache:
   directories:
     - $HOME/.m2
     - $HOME/.boot
-    - $HOME/boot
-    - $HOME/zulu
 matrix:
   include:
     - env: JDK=zulu7
