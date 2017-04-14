@@ -25,7 +25,8 @@ Example 2 ("all matches" logic):
 
 Note: for some problems, first match wins may result in simpler decision tables
 
-These (hotlinked) images are courtesy of DTRules (upon whose excellent ideas anarchy is based)
+These (hotlinked) images are courtesy of DTRules (upon whose excellent ideas anarchy is based).
+Sadly there is a bug in them: the last line of the table should read (A == B) and I haven't produced new images yet.
 
 ## Usage
 
