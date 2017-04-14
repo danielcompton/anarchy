@@ -41,7 +41,7 @@ These (hotlinked) images are courtesy of DTRules (upon whose excellent ideas ana
     (when (> (:b data) 5)
       (prn "b > 5")))
   (when (= (:a data) (:c data))
-    (prn "a == b")))
+    (prn "a == c")))
 
 ;; You needn't use a map, but it's an obvious choice
 (def data {:a 0 :b 5 :c 0})
@@ -68,7 +68,7 @@ These (hotlinked) images are courtesy of DTRules (upon whose excellent ideas ana
 (def action-matrix-1
   [#(prn "a is 0") #{:a :b}]
   [#(prn "b > 5, a != 0")  #{:c :d}]
-  [#(prn "a == b") #{:a :c :e}])
+  [#(prn "a == c") #{:a :c :e}])
 ;; the "all matches" matrices:
 (def cond-matrix-2
   [[:a true nil nil]
@@ -77,7 +77,7 @@ These (hotlinked) images are courtesy of DTRules (upon whose excellent ideas ana
 (def action-matrix-2
   [#(prn "a is 0") #{:a}]
   [#(prn "b > 5, a!= 0")  #{:b}]
-  [#(prn "a == b") #{:c}])
+  [#(prn "a == c") #{:c}])
 
 ;; First match wins example
 (doseq [h (->> (a/match-conds cond-matrix-1 conds data) ;; returns a lazy seq
