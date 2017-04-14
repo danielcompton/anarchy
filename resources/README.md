@@ -17,11 +17,27 @@ The following  two examples are equivalent using two different matching logics.
 
 Example 1 ("first match wins" logic):
 
-![example 1](http://www.dtrules.com/newsite/wp-content/uploads/2012/07/first1.png)
+Conditions | 1 | 2 | 3 | 4 | 5 | 6
+-----------| --|---|---|---|---|---
+A == 0     | Y | Y |   |   |   |
+B > 5      |   |   | Y | Y |   |
+A == C     | Y | N | Y | N | Y | N
+**Actions**    | **1** | **2** | **3** | **4** | **5** | **6**
+Print "A is 0" | X | X |   |   |   |
+Print "B > 5"  |   |   | X | X |   |
+Print "A == C" | X |   | X |   | X |
 
 Example 2 ("all matches" logic):
 
-![example 2](http://www.dtrules.com/newsite/wp-content/uploads/2012/07/all.png)
+Conditions | 1 | 2 | 3
+-----------| --|---|---|
+A == 0     | Y | N |   |
+B > 5      |   | Y |   |
+A == C     |   |   | Y |
+**Actions**    | **1** | **2** | **3**
+Print "A is 0" | X |   |
+Print "B > 5"  |   | X |
+Print "A == C" |   |   | X
 
 Note: for some problems, first match wins may result in simpler decision tables
 
