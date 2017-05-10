@@ -159,7 +159,7 @@ With anarchy (and a lot of comments!):
    [#(update % :price * 0.8) #{:c}]])
 
 (->> (a/match-conds cond-matrix conds data) ;; match conditions
-     (a/match-actions action-matrix))       ;; match actions
+     (a/match-actions action-matrix)        ;; match actions
      (reduce #(%2 %1) data))                ;; apply actions
 ```
 

@@ -12,7 +12,7 @@
    returns: lazy seq of matching identifiers"
   [matrix conditions data]
   (let [test (fn [[exp got]] (or (nil? exp) (= exp got)))
-        results (map #(% data) conditions)]
+        results (map #(or (% data) false) conditions)]
     (for [[id & col] matrix :when (every? test (map vector col results))]
       id)))
 
