@@ -5,13 +5,7 @@ The irresponsible clojure guild presents...
 
 # Anarchy - logic without rules.
 
-A minimalist pure-clojure port of the unbalanced trees model of 
-
-No dependencies except clojure itself.
-
-## What is it?
-
-It's a "logic engine" for end-users that encodes logic into decision
+A "logic engine" for end-users that encodes logic into decision
 tables. Anarchy gives you a model you can build a UI around that
 programmers and non-programmers alike can grok. I wrote it to support
 user-editable pricing rules for a site where the users are not very
@@ -119,7 +113,7 @@ Here again are our matrix column names:
 
 In contrast to earlier where we picked Y(es), N(o) and neutral, this
 time it is just yes or no, which we symbolise with Xs. The process is
-thus a simplification of the condition matching and fairly easy to understand.
+thus a simplification of the condition matching.
 
 ## Code
 
@@ -196,6 +190,8 @@ wins logic. Here are some names for our matrix columns:
 3. Off-peak short-booking
 4. Peak booking (generic)
 
+Some worked examples:
+
 * A 7-day peak season booking starting on a monday:
   * Matches column 1 (season is peak)
   * Result: Column 1 matches
@@ -264,5 +260,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 
