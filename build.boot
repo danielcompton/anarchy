@@ -15,7 +15,7 @@
 
 (task-options!
  pom {:project 'irresponsible/anarchy
-      :version "0.2.0"
+      :version "0.2.1"
       :description "Logic without rules"}
  push {:tag true
        :ensure-branch "master"
