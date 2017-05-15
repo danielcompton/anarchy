@@ -1,6 +1,6 @@
 language: generic
 sudo: false
-script: ./boot travis
+script: boot-driver test
 branches:
   only:
     - master
@@ -22,9 +22,9 @@ matrix:
 before_install:
   - curl -fsSLo init.sh http://irresponsible.github.io/tools.travis.jdk-installer/init.sh
   - source init.sh
-  - install_jdk "${JDK}"
-  - install_boot
-  - setup_boot_env
+  - jdk-installer install "${JDK}"
+  - boot-driver install-boot
+  - boot-driver setup-env
   - java -version
 install:
-  - ./boot travis-installdeps
+  - boot-driver install-deps
