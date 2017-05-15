@@ -44,22 +44,8 @@
   (comp (testing) (watch) (test)))
 
 ;; RlsMgr Only stuff
-(deftask make-jar []
-  (comp (pom) (jar) (target)))
-
-(deftask install-jar []
-  (comp (pom) (jar) (install)))
-
 (deftask release []
   (comp (pom) (jar) (push)))
-
-;; Travis Only stuff
-(deftask travis []
-  (testing)
-  (comp (t/test) (make-jar)))
-
-(deftask travis-installdeps []
-  (testing) identity)
 
 (deftask jitpak-deploy []
   (task-options! pom {
