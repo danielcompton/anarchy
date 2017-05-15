@@ -1,11 +1,11 @@
 before_install:
   - curl -fsSLo init.sh http://irresponsible.github.io/tools.travis.jdk-installer/init.sh
   - source init.sh
-  - install_jdk "zulu8"
-  - install_boot
-  - setup_boot_env
+  - jdk-installer install "zulu8"
+  - boot-driver install-boot
+  - boot-driver setup-env
   - java -version
-  - ./boot travis-installdeps
+  - boot-driver install-deps
 install:
-  - ./boot jitpak-deploy
+  - boot-driver jitpack-deploy
 
