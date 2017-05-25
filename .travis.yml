@@ -30,3 +30,14 @@ before_install:
   - java -version
 install:
   - boot-driver install-deps
+
+notifications:
+  irc:
+    channels:
+      - "irc://chat.freenode.net:6665/#irresponsible-ci"
+    skip_join: true
+    template:
+      - "build %{build_number} \x037%{result}\x03: %{repository_slug}/%{branch} @ \x037%{commit}\x03 - \x037%{commit_subject}\x03 by \x033%{author}\x03"
+      - "  - elapsed: %{elapsed_time}, duration: %{duration}"
+      - "  - changed: %{compare_url}"
+      - "  - build  : %{build_url}"
