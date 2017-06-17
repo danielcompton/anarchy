@@ -239,6 +239,9 @@ And a code example:
      (reduce #(%2 %) data))                 ;; apply actions
 ```
 
+There is also the 'gilded rose kata' technical example available in `gilded-rose.clj`,
+which I submitted as a technical test to a clojure-using company who turned out to suck.
+
 ## Suggestions
 
 * Use identifiers for actions and maintain a map of ident -> function
