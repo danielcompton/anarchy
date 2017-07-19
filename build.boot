@@ -6,6 +6,8 @@
     '[[org.clojure/clojure "1.9.0-alpha16" :scope "provided"]]))
 
 (set-env!
+  :project 'irresponsible/anarchy
+  :version "0.2.1"
   :resource-paths #{"src" "resources"}
   :source-paths #{"src"}
   :dependencies #(into % '[[org.clojure/clojurescript "1.9.542" :scope "test"]
@@ -19,8 +21,8 @@
          '[crisptrutski.boot-cljs-test :refer [test-cljs]])
 
 (task-options!
- pom {:project 'irresponsible/anarchy
-      :version "0.2.1"
+ pom {:project (get-env :project)
+      :version (get-env :version)
       :description "Logic without rules"}
  push {:tag true
        :ensure-branch "master"
