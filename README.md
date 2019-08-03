@@ -1,5 +1,6 @@
 [![Clojars Project](https://img.shields.io/clojars/v/irresponsible/anarchy.svg)](https://clojars.org/irresponsible/anarchy)
-[![Dependencies Status](https://jarkeeper.com/irresponsible/anarchy/status.svg)](https://jarkeeper.com/irresponsible/anarchy)
+[![cljdoc badge](https://cljdoc.org/badge/irresponsible/anarchy)](https://cljdoc.org/d/irresponsible/anarchy)
+[![CircleCI](https://circleci.com/gh/clj-commons/fs.svg?style=svg)](https://circleci.com/gh/clj-commons/fs)
 
 The irresponsible clojure guild presents...
 
